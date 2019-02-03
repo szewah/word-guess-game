@@ -1,0 +1,61 @@
+body {
+    color: #efebe4;
+    background-color:#344652;
+
+}
+.container {
+    width: 60%;
+    margin: 20px auto;
+}
+
+#title, #song-holder {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+#title {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 150px;
+    letter-spacing: 10px;
+    padding-top: 40px;
+}
+
+h2 {
+    color: #ff5c10;
+    text-align: right;
+    font-family: 'Crete Round', serif;
+    font-size: 50px;
+    -ms-transform: skewX(-10deg); 
+    -webkit-transform: skewX(-10deg); 
+    transform: skewX(-10deg);  
+    -ms-transform: skewY(-11deg); 
+    -webkit-transform: skewY(-11deg); 
+    transform: skewY(-11deg);
+    margin-top: -10px;
+}
+
+#start {
+    text-align: center;
+}
+
+.col-md-6 {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ff9c10;
+    border: 5px solid orangered;
+}
+
+img {
+    margin-top: 20px;
+    width: 250px;
+    height: 200px;
+}
+
+#wins, #answer-guesses, #rightGuess, #allowedGuesses, #wrongGuess {
+    font-size: 25px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
