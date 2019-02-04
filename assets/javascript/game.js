@@ -1,18 +1,18 @@
+// "use strict"
 //Based on szunjic/Hangman-game && m-wolowicz/Hangman-game
 //Global variables
 //===================================================================
 //Create an array of artists
-const artists = ['madonna', 'blur', 'm38', 'daftpunk', 'leftfield'];
+const artists = ['madonna', 'jamesblake', 'massiveattack', 'daftpunk', 'leftfield', 'queen'];
 //Word chosen by computer;
-let chosenArtist = "";
+let chosenArtist = ""; //a string of the name of the chosen artists;
 //Userguess
 let userGuess;
 //Arrays to capture letters
-let currWrdLtrs = [];//array that holds the actual letters in the chosenArtist;
-let numBlanks = 0;//Holds the number of blanks in the chosenArtist;
+let currWrdLtrs = [];//array that holds the actual letters in chosenArtist;
+let numBlanks = 0;//Holds the number of blanks in chosenArtist;
 let answerDisplay =[];//Array to store the answer as it displays;
 let wrongGuess = [];//stores all the wrong letter guesses
-//to answers
 //Counters
 let wins = 0;
 let allowedGuesses = 9;
@@ -50,6 +50,29 @@ function newGame () {
     docWrongGuess.innerHTML = "Letters guessed: " + wrongGuess;
 }
 
+function artistImage () {
+    if (chosenArtist === "madonna") {
+        document.getElementById("artist-video").src = "https://player.vimeo.com/video/267799387?autoplay=1";
+        document.getElementById("song-answer").innerHTML = "Madonna";
+        // document.getElementById("audio").
+    } else if (chosenArtist === "queen") {
+        document.getElementById("artist-video").src = "https://player.vimeo.com/video/8537554?autoplay=1";
+        document.getElementById("song-answer").innerHTML = "Queen";
+    } else if (chosenArtist === "leftfield") {
+        document.getElementById("artist-video").src = "https://player.vimeo.com/video/69153923?autoplay=1";
+        document.getElementById("song-answer").innerHTML = "Leftfield";    
+    } else if (chosenArtist === "massiveattack") {
+        document.getElementById("artist-video").src = "https://player.vimeo.com/video/18010726?autoplay=1";
+        document.getElementById("song-answer").innerHTML = "Massive Attack";
+    } else if (chosenArtist === "daftpunk") {
+        document.getElementById("artist-video").src = "https://player.vimeo.com/video/71804663?autoplay=1"; 
+        document.getElementById("song-answer").innerHTML = "Daft Punk";
+    } else if (chosenArtist === "jamesblake") {
+        document.getElementById("artist-video").src = "https://player.vimeo.com/video/15624524?autoplay=1";
+        document.getElementById("song-answer").innerHTML = "James Blake";
+    }    
+};
+
 function checkLetters(letter) {
         var correctLetter = false;
         for (var i = 0; i < numBlanks; i++) {
@@ -76,8 +99,9 @@ function roundComplete () {
     docGuessesLeft.innerHTML = "Guesses: " + allowedGuesses;
     docAnswerDisplay.innerHTML = answerDisplay.join(" ");
     docWrongGuess.innerHTML = "Letters guessed: " + wrongGuess;
-
+    
     if (currWrdLtrs.toString() === answerDisplay.toString()) {
+        artistImage();
         wins++;
         alert("You guessed " + chosenArtist + " correctly. Try another round.")
         console.log("You win")
@@ -93,9 +117,13 @@ function roundComplete () {
 newGame();
 
 document.onkeyup = function (event) {
-    userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    userGuess = event.key.toLowerCase();
     console.log("You have guessed the letter: " + userGuess);
     checkLetters(userGuess);
     roundComplete();
 };
+
+
+
+
 
