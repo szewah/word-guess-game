@@ -53,27 +53,33 @@ function newGame () {
 newGame();
 
 function removeImage () {
-    document.getElementsByClassName('iframeframe').style.backgroundImage = "";
+    var removePIC = document.getElementById('questionPic');
+    removePIC.style.display = "none";
 } 
 
 function video () {
-    removeImage();
     if (chosenArtist === "madonna") {
+        removeImage();
         document.getElementById("artist-video").src = "https://player.vimeo.com/video/267799387?autoplay=1";
         document.getElementById("song-answer").innerHTML = "Madonna";
     } else if (chosenArtist === "queen") {
+        removeImage();
         document.getElementById("artist-video").src = "https://player.vimeo.com/video/8537554?autoplay=1";
         document.getElementById("song-answer").innerHTML = "Queen";
     } else if (chosenArtist === "leftfield") {
+        removeImage();
         document.getElementById("artist-video").src = "https://player.vimeo.com/video/69153923?autoplay=1";
         document.getElementById("song-answer").innerHTML = "Leftfield";    
     } else if (chosenArtist === "massiveattack") {
+        removeImage();
         document.getElementById("artist-video").src = "https://player.vimeo.com/video/71968977?autoplay=1";
         document.getElementById("song-answer").innerHTML = "Massive Attack";
     } else if (chosenArtist === "daftpunk") {
+        removeImage();
         document.getElementById("artist-video").src = "https://player.vimeo.com/video/71804663?autoplay=1"; 
         document.getElementById("song-answer").innerHTML = "Daft Punk";
     } else if (chosenArtist === "jamesblake") {
+        removeImage();
         document.getElementById("artist-video").src = "https://player.vimeo.com/video/15624524?autoplay=1";
         document.getElementById("song-answer").innerHTML = "James Blake";
     };

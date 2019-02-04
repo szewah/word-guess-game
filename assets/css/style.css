@@ -52,11 +52,9 @@ h2 {
     
 }
 
-.iframeframe {
-    background-image: url("../images/question-mark.jpg"); 
-    margin: 0; 
-    padding: 0; 
-    display: inline-block;
+#questionPic {
+    width: 250px;
+    height: 200px;
 }
 
 iframe {
