@@ -52,7 +52,12 @@ function newGame () {
 
 newGame();
 
+function removeImage () {
+    document.getElementsByClassName('iframeframe').style.backgroundImage = "";
+} 
+
 function video () {
+    removeImage();
     if (chosenArtist === "madonna") {
         document.getElementById("artist-video").src = "https://player.vimeo.com/video/267799387?autoplay=1";
         document.getElementById("song-answer").innerHTML = "Madonna";
