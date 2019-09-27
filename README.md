@@ -5,8 +5,8 @@ nine guesses in which to win.
 - Github page: https://szewah.github.io/word-guess-game/
 - Watch a video demonstration: https://vimeo.com/362690922
 
-![wordguessgame](https://user-images.githubusercontent.com/32065713/65734087-6460d400-e09f-11e9-966a-cb36f3d76e81.gif)
 
+<img width="450" alt="Screen Shot 2019-09-27 at 10 19 50 AM" src="https://user-images.githubusercontent.com/32065713/65776588-74fd6280-e110-11e9-8255-78eb4015ccf1.png">
 
 
 ## Built With
