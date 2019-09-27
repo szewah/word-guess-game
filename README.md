@@ -10,5 +10,8 @@ nine guesses in which to win.
 ## Built With
 HTML, CSS, JavaScript, Bootstrap.
 
+## Installation
+Download the file, open in VSC and run.
+
 ## Acknowledgement
 Thanks to the instructors and teaching assistants at Columbia Univeristy Coding Bootcamp.
